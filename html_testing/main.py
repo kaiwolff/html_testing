@@ -23,7 +23,7 @@ def attempt_register(username, password, firstname, lastname, birthyear):
 
 
 def check_manager(username, password):
-    validate == check_login(username, password)
+    validate = check_login(username, password)
     if username == "admin" and validate == True:
         return True
 
@@ -64,7 +64,7 @@ def attempt_login():
 
 
     if check_login(username,password) == True:
-        if check_manager = True:
+        if check_manager(username, password) == True:
             return render_template('manager_options.html')
         return render_template('logged_in.html', username = username)
 
